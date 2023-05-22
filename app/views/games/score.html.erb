@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>Your score!</title>
+  </head>
+  <body class="flexbox mx-auto col-10 col-md-8 col-lg-6">
+    <div>
+      <h1><%= "Your score is #{@result[:score]}. #{@result[:message]}" %></h1>
+    </div>
+    <br>
+    <div>
+      <%= link_to "Play again!", new_path %>
+    </div>
+  </body>
+</html>

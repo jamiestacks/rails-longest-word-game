@@ -1,0 +1,20 @@
+<html>
+  <head>
+    <title>Longest Word Game!</title>
+  </head>
+
+  <body class="flexbox mx-auto col-10 col-md-8 col-lg-6">
+  <h1>Longest Word Game</h1>
+  <br>
+  <h3><%= @letters %></h3>
+  <br>
+  <p>What's the longest word that you can make using the letters above?</p>
+  <form action="/score" method="POST" data-turbo="false">
+    <input type="text" name="guess" class="form-control" value="<%= params[:guess] %>">
+    <input type="submit" value="Submit!" class="btn btn-primary btn-customized mt-4">
+    <%= hidden_field_tag :grid, @letters %>
+    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  </form>
+  </body>
+
+</html>
